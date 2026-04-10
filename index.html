@@ -1,0 +1,1740 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JetztON | Webdesign Thun – Moderne Websites für KMU in 1 bis 2 Wochen</title>
+<meta name="description" content="Web-Agentur in Thun. Wir erstellen kostenlos einen Prototypen Ihrer neuen Website. Umsetzung in 1 bis 2 Wochen, ab 300 CHF, DSG-konform.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://jetzton.ch/">
+
+<!-- Lokale SEO -->
+<meta name="geo.region" content="CH-BE">
+<meta name="geo.placename" content="Thun">
+<meta name="geo.position" content="46.7580;7.6280">
+<meta name="ICBM" content="46.7580, 7.6280">
+<meta name="author" content="JetztON">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_CH">
+<meta property="og:site_name" content="JetztON">
+<meta property="og:title" content="JetztON | Webdesign Thun – Moderne Websites für KMU in 1 bis 2 Wochen">
+<meta property="og:description" content="Web-Agentur in Thun. Wir erstellen kostenlos einen Prototypen Ihrer neuen Website. Umsetzung in 1 bis 2 Wochen, ab 300 CHF, DSG-konform.">
+<meta property="og:url" content="https://jetzton.ch/">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="JetztON | Webdesign Thun – Moderne Websites für KMU in 1 bis 2 Wochen">
+<meta name="twitter:description" content="Web-Agentur in Thun. Wir erstellen kostenlos einen Prototypen Ihrer neuen Website. Umsetzung in 1 bis 2 Wochen, ab 300 CHF, DSG-konform.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Schema.org LocalBusiness -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "JetztON",
+  "description": "Web-Agentur in Thun. Moderne Websites für Schweizer KMU mit kostenlosem Prototyp vor Kauf.",
+  "url": "https://jetzton.ch",
+  "email": "jetzton@outlook.com",
+  "areaServed": [
+    {"@type": "City", "name": "Thun"},
+    {"@type": "AdministrativeArea", "name": "Berner Oberland"},
+    {"@type": "Country", "name": "Schweiz"}
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Thun",
+    "postalCode": "3600",
+    "addressRegion": "BE",
+    "addressCountry": "CH"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 46.7580,
+    "longitude": 7.6280
+  },
+  "priceRange": "CHF 300 - CHF 550",
+  "serviceType": ["Webdesign", "Website-Erstellung", "Landingpage", "Website-Wartung"]
+}
+</script>
+
+<style>
+:root {
+  --c-bg: #0a0f1e;
+  --c-bg-alt: #0f1629;
+  --c-bg-soft: #141b30;
+  --c-surface: #1a2238;
+  --c-border: rgba(255, 255, 255, 0.08);
+  --c-border-strong: rgba(255, 255, 255, 0.16);
+
+  --c-text: #f5f7fb;
+  --c-text-muted: #9aa3bd;
+  --c-text-dim: #6b7590;
+
+  --c-blue: #3b6fff;
+  --c-blue-bright: #5a8bff;
+  --c-blue-deep: #1d3fb8;
+  --c-accent: #6ee7ff;
+
+  --grad-primary: linear-gradient(135deg, #3b6fff 0%, #6ee7ff 100%);
+  --grad-deep: linear-gradient(135deg, #1d3fb8 0%, #3b6fff 60%, #6ee7ff 100%);
+
+  --f-body: "Poppins", -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --radius-s: 10px;
+  --radius-m: 16px;
+  --radius-l: 24px;
+  --radius-xl: 32px;
+
+  --shadow-glow: 0 20px 60px -20px rgba(59, 111, 255, 0.45);
+  --shadow-card: 0 12px 40px -12px rgba(0, 0, 0, 0.6);
+
+  --container: 1200px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: var(--f-body);
+  background: var(--c-bg);
+  color: var(--c-text);
+  line-height: 1.65;
+  font-size: 16px;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 400;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 50% at 20% 0%, rgba(59, 111, 255, 0.15), transparent 60%),
+    radial-gradient(ellipse 60% 40% at 85% 15%, rgba(110, 231, 255, 0.08), transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-decoration: none; }
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 1;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--f-body);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--c-text);
+}
+
+h1 { font-size: clamp(2.2rem, 5.5vw, 4rem); font-weight: 700; }
+h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 700; }
+h3 { font-size: clamp(1.2rem, 2vw, 1.5rem); font-weight: 600; }
+
+p { color: var(--c-text-muted); font-weight: 400; }
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--c-accent);
+  padding: 8px 16px;
+  border: 1px solid rgba(110, 231, 255, 0.25);
+  border-radius: 100px;
+  background: rgba(110, 231, 255, 0.05);
+}
+
+.eyebrow::before {
+  content: "";
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--c-accent);
+  box-shadow: 0 0 12px var(--c-accent);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 28px;
+  border-radius: 100px;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: -0.005em;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--grad-primary);
+  color: #0a0f1e;
+  box-shadow: var(--shadow-glow);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    115deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.65) 50%,
+    transparent 100%
+  );
+  transform: skewX(-20deg);
+  animation: btn-shine 3.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
+@keyframes btn-shine {
+  0%, 55% { left: -75%; }
+  100% { left: 175%; }
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 30px 80px -15px rgba(59, 111, 255, 0.7), 0 0 40px rgba(110, 231, 255, 0.3);
+}
+
+.btn-primary:hover::after {
+  animation-duration: 1.4s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-primary::after { animation: none; display: none; }
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--c-text);
+  border: 1px solid var(--c-border-strong);
+}
+
+.btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--c-blue-bright);
+}
+
+.btn svg { width: 18px; height: 18px; }
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background: rgba(10, 15, 30, 0.75);
+  border-bottom: 1px solid var(--c-border);
+}
+
+.nav-inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--grad-primary);
+  box-shadow: 0 0 16px var(--c-blue-bright);
+}
+
+.nav-links {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+.nav-links a {
+  color: var(--c-text-muted);
+  transition: color 0.2s;
+  position: relative;
+}
+
+.nav-links a:hover, .nav-links a.active { color: var(--c-text); }
+
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: -6px;
+  height: 2px;
+  background: var(--grad-primary);
+  border-radius: 2px;
+}
+
+.nav-cta { display: flex; align-items: center; gap: 12px; }
+
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: 1px solid var(--c-border-strong);
+  border-radius: 8px;
+  padding: 10px 12px;
+  cursor: pointer;
+  color: var(--c-text);
+}
+
+.nav-toggle svg { width: 20px; height: 20px; display: block; }
+
+@media (max-width: 900px) {
+  .nav-links { display: none; }
+  .nav-toggle { display: block; }
+  .nav-cta .btn { display: none; }
+  .nav-links.open {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 0; right: 0;
+    flex-direction: column;
+    background: var(--c-bg-alt);
+    padding: 24px;
+    border-bottom: 1px solid var(--c-border);
+    gap: 20px;
+  }
+}
+
+section { padding: 100px 0; position: relative; z-index: 1; }
+@media (max-width: 768px) { section { padding: 70px 0; } }
+
+.hero {
+  padding: 100px 0 90px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 600px; height: 600px;
+  right: -200px; top: -100px;
+  background: radial-gradient(circle, rgba(59, 111, 255, 0.2) 0%, transparent 60%);
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 50px; }
+}
+
+.hero h1 { margin: 24px 0; font-weight: 700; }
+
+.hero h1 em {
+  font-style: normal;
+  background: var(--grad-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-sub {
+  font-size: 1.1rem;
+  max-width: 540px;
+  margin-bottom: 36px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.hero-meta {
+  margin-top: 48px;
+  display: flex;
+  gap: 36px;
+  flex-wrap: wrap;
+}
+
+.hero-meta-item strong {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 700;
+  background: var(--grad-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  line-height: 1;
+}
+
+.hero-meta-item span {
+  font-size: 0.78rem;
+  color: var(--c-text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 500;
+  margin-top: 6px;
+  display: block;
+}
+
+.hero-visual { position: relative; }
+
+.hero-image {
+  width: 100%;
+  border-radius: var(--radius-l);
+  border: 1px solid var(--c-border);
+  box-shadow: var(--shadow-card);
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  transform: perspective(1200px) rotateY(-6deg) rotateX(2deg);
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-image:hover { transform: perspective(1200px) rotateY(-2deg) rotateX(0deg); }
+
+.hero-image-wrap {
+  position: relative;
+}
+
+.hero-image-wrap::before {
+  content: "";
+  position: absolute;
+  inset: -20px;
+  background: var(--grad-primary);
+  border-radius: var(--radius-xl);
+  filter: blur(40px);
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.section-header {
+  max-width: 720px;
+  margin: 0 auto 70px;
+  text-align: center;
+}
+
+.section-header h2 { margin: 20px 0 16px; }
+.section-header p { font-size: 1.05rem; }
+
+.problem {
+  background: linear-gradient(180deg, transparent, rgba(59, 111, 255, 0.04));
+}
+
+.problem-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.problem-card {
+  background: var(--c-bg-soft);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-m);
+  padding: 32px;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.problem-card::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: var(--grad-primary);
+  transform: scaleY(0);
+  transition: transform 0.4s;
+  transform-origin: top;
+}
+
+.problem-card:hover {
+  border-color: var(--c-border-strong);
+  transform: translateY(-4px);
+}
+
+.problem-card:hover::before { transform: scaleY(1); }
+
+.problem-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(59, 111, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+  color: var(--c-blue-bright);
+}
+
+.problem-icon svg { width: 24px; height: 24px; stroke-width: 2; }
+
+.problem-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.problem-card p { font-size: 0.92rem; }
+
+/* Prozess */
+.process-timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.process-timeline::before {
+  content: "";
+  position: absolute;
+  left: 28px;
+  top: 40px;
+  bottom: 40px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--c-blue), transparent);
+}
+
+.process-step {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.process-num {
+  flex-shrink: 0;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: var(--c-bg-soft);
+  border: 2px solid var(--c-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--c-blue-bright);
+  position: relative;
+  z-index: 2;
+}
+
+.process-content { flex: 1; padding-top: 12px; }
+.process-content h3 { margin-bottom: 8px; font-weight: 600; }
+.process-content p { font-size: 0.95rem; }
+
+.compare {
+  background: linear-gradient(180deg, rgba(59, 111, 255, 0.04), transparent);
+}
+
+.compare-table {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--c-bg-soft);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-l);
+  overflow: hidden;
+}
+
+.compare-row {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  border-bottom: 1px solid var(--c-border);
+}
+
+.compare-row:last-child { border-bottom: none; }
+
+.compare-row > div {
+  padding: 22px 28px;
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+.compare-row .label { font-weight: 600; color: var(--c-text); }
+.compare-row .old { color: var(--c-text-dim); border-left: 1px solid var(--c-border); }
+.compare-row .new {
+  color: var(--c-text);
+  font-weight: 500;
+  background: rgba(59, 111, 255, 0.06);
+  border-left: 1px solid var(--c-border);
+}
+
+.compare-head { background: var(--c-surface); font-weight: 700; }
+.compare-head .new { background: rgba(59, 111, 255, 0.15); color: var(--c-accent); }
+
+@media (max-width: 700px) {
+  .compare-row { grid-template-columns: 1fr; }
+  .compare-row > div { padding: 14px 20px; }
+  .compare-row .label { color: var(--c-accent); }
+  .compare-row .old::before { content: "Klassisch: "; color: var(--c-text-dim); margin-right: 8px; }
+  .compare-row .new::before { content: "JetztON: "; color: var(--c-accent); margin-right: 8px; }
+  .compare-head { display: none; }
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.benefit {
+  padding: 32px 28px;
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-m);
+  background: var(--c-bg-soft);
+  transition: all 0.3s;
+}
+
+.benefit:hover {
+  background: var(--c-surface);
+  border-color: var(--c-blue);
+}
+
+.benefit-icon {
+  width: 50px; height: 50px;
+  border-radius: 13px;
+  background: var(--grad-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0a0f1e;
+  margin-bottom: 22px;
+}
+
+.benefit-icon svg { width: 24px; height: 24px; stroke-width: 2.2; }
+
+.benefit h3 { font-size: 1.1rem; margin-bottom: 10px; font-weight: 600; }
+.benefit p { font-size: 0.92rem; }
+
+/* Preise */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  max-width: 960px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+@media (max-width: 800px) {
+  .pricing-grid { grid-template-columns: 1fr; }
+}
+
+.price-card {
+  background: var(--c-bg-soft);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-l);
+  padding: 44px 36px;
+  position: relative;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.price-card.featured {
+  background: linear-gradient(180deg, rgba(59, 111, 255, 0.12), var(--c-bg-soft));
+  border-color: var(--c-blue);
+  box-shadow: var(--shadow-glow);
+  transform: scale(1.03);
+}
+
+@media (max-width: 800px) {
+  .price-card.featured { transform: none; }
+}
+
+.price-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--grad-primary);
+  color: #0a0f1e;
+  padding: 7px 20px;
+  border-radius: 100px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.price-card h3 { font-size: 1.4rem; margin-bottom: 12px; font-weight: 700; }
+.price-card .price-desc { font-size: 0.92rem; min-height: 60px; }
+
+.price-card .price-tag {
+  font-size: 2.6rem;
+  line-height: 1;
+  margin: 24px 0 6px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.price-card .price-tag small {
+  font-size: 0.95rem;
+  color: var(--c-text-muted);
+  font-weight: 500;
+}
+
+.price-recur {
+  font-size: 0.9rem;
+  color: var(--c-text-muted);
+  margin-bottom: 28px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--c-border);
+  font-weight: 500;
+}
+
+.price-list {
+  list-style: none;
+  margin-bottom: 32px;
+  flex: 1;
+}
+
+.price-list li {
+  padding: 11px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.93rem;
+  color: var(--c-text);
+}
+
+.price-list svg {
+  flex-shrink: 0;
+  width: 20px; height: 20px;
+  color: var(--c-accent);
+  margin-top: 2px;
+}
+
+.price-card .btn { width: 100%; justify-content: center; }
+
+.price-note {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: var(--c-text-dim);
+}
+
+.price-extra-note {
+  background: rgba(110, 231, 255, 0.06);
+  border: 1px solid rgba(110, 231, 255, 0.2);
+  border-radius: var(--radius-s);
+  padding: 14px 18px;
+  font-size: 0.85rem;
+  color: var(--c-text-muted);
+  margin-bottom: 24px;
+}
+
+.cta-banner {
+  background: var(--grad-deep);
+  border-radius: var(--radius-xl);
+  padding: 70px 50px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin: 40px 0;
+}
+
+.cta-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.15), transparent 50%);
+}
+
+.cta-banner h2 { color: white; margin-bottom: 16px; position: relative; }
+
+.cta-banner p {
+  color: rgba(255,255,255,0.85);
+  font-size: 1.05rem;
+  max-width: 560px;
+  margin: 0 auto 32px;
+  position: relative;
+}
+
+.cta-banner .btn {
+  position: relative;
+  background: white;
+  color: var(--c-blue-deep);
+}
+
+.cta-banner .btn:hover { background: #f0f4ff; }
+
+.contact-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+  align-items: start;
+}
+
+@media (max-width: 900px) { .contact-wrap { grid-template-columns: 1fr; gap: 40px; } }
+
+.contact-info h2 { margin: 20px 0 20px; }
+.contact-info > p { margin-bottom: 32px; font-size: 1rem; }
+
+.contact-detail {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 0;
+  border-top: 1px solid var(--c-border);
+  font-size: 0.93rem;
+}
+
+.contact-detail:last-child { border-bottom: 1px solid var(--c-border); }
+.contact-detail svg { color: var(--c-blue-bright); flex-shrink: 0; }
+
+.form-card {
+  background: var(--c-bg-soft);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-l);
+  padding: 40px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+@media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } }
+
+.form-field { margin-bottom: 18px; }
+
+.form-field label {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--c-text-muted);
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.form-field label .req { color: var(--c-accent); }
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  padding: 14px 16px;
+  background: var(--c-bg);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-s);
+  color: var(--c-text);
+  font-family: inherit;
+  font-size: 0.93rem;
+  transition: all 0.2s;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: var(--c-blue-bright);
+  background: var(--c-bg-alt);
+}
+
+.form-field textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+.package-options {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.package-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 16px;
+  background: var(--c-bg);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-s);
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.9rem;
+}
+
+.package-option:hover { border-color: var(--c-border-strong); background: var(--c-bg-alt); }
+
+.package-option input {
+  margin-top: 3px;
+  accent-color: var(--c-blue);
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+}
+
+.package-option:has(input:checked) {
+  border-color: var(--c-blue);
+  background: rgba(59, 111, 255, 0.08);
+}
+
+.package-option .opt-label { font-weight: 600; color: var(--c-text); display: block; margin-bottom: 2px; }
+.package-option .opt-sub { font-size: 0.78rem; color: var(--c-text-muted); }
+
+.form-consent {
+  font-size: 0.8rem;
+  color: var(--c-text-dim);
+  margin: 16px 0 22px;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  line-height: 1.5;
+}
+
+.form-consent input { margin-top: 3px; accent-color: var(--c-blue); flex-shrink: 0; }
+
+.form-card .btn { width: 100%; justify-content: center; }
+
+.footer {
+  border-top: 1px solid var(--c-border);
+  padding: 70px 0 30px;
+  margin-top: 60px;
+  background: var(--c-bg-alt);
+  position: relative;
+  z-index: 1;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 800px) {
+  .footer-top { grid-template-columns: 1fr 1fr; gap: 36px; }
+}
+
+.footer-brand {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-about { font-size: 0.88rem; max-width: 280px; }
+
+.footer-col h4 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--c-text-dim);
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+
+.footer-col a {
+  display: block;
+  color: var(--c-text-muted);
+  padding: 6px 0;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+
+.footer-col a:hover { color: var(--c-text); }
+
+.footer-bottom {
+  border-top: 1px solid var(--c-border);
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.8rem;
+  color: var(--c-text-dim);
+}
+
+.cookie-banner {
+  position: fixed;
+  left: 24px;
+  right: 24px;
+  bottom: 24px;
+  max-width: 480px;
+  background: var(--c-surface);
+  border: 1px solid var(--c-border-strong);
+  border-radius: var(--radius-m);
+  padding: 24px;
+  box-shadow: 0 30px 80px -20px rgba(0,0,0,0.8);
+  z-index: 200;
+  transform: translateY(150%);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cookie-banner.show { transform: translateY(0); }
+.cookie-banner h4 { font-size: 0.95rem; margin-bottom: 6px; font-weight: 600; }
+.cookie-banner p { font-size: 0.82rem; margin-bottom: 16px; }
+.cookie-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.cookie-actions .btn { padding: 10px 18px; font-size: 0.82rem; }
+
+.legal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 8, 18, 0.85);
+  backdrop-filter: blur(6px);
+  z-index: 300;
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 60px 20px;
+  overflow-y: auto;
+}
+
+.legal-overlay.open { display: flex; }
+
+.legal-modal {
+  background: var(--c-bg-alt);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-l);
+  padding: 48px;
+  max-width: 760px;
+  width: 100%;
+  position: relative;
+}
+
+.legal-modal h2 { margin-bottom: 24px; font-weight: 700; }
+.legal-modal h3 { font-size: 1.05rem; margin: 22px 0 10px; color: var(--c-text); font-weight: 600; }
+.legal-modal p, .legal-modal li { font-size: 0.9rem; margin-bottom: 10px; }
+.legal-modal ul { padding-left: 20px; }
+
+.legal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  color: var(--c-text);
+  cursor: pointer;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.legal-close:hover { background: var(--c-blue); }
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s, transform 0.8s;
+}
+
+[data-reveal].visible { opacity: 1; transform: translateY(0); }
+
+.page-head {
+  padding: 80px 0 60px;
+  text-align: center;
+  position: relative;
+}
+
+.page-head h1 { margin: 16px 0 18px; font-size: clamp(2rem, 4.5vw, 3.4rem); }
+.page-head p { font-size: 1.05rem; max-width: 620px; margin: 0 auto; }
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+}
+
+.service-card {
+  background: var(--c-bg-soft);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-m);
+  padding: 38px 32px;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card:hover {
+  border-color: var(--c-blue);
+  transform: translateY(-6px);
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: 0; right: 0;
+  width: 160px; height: 160px;
+  background: radial-gradient(circle, rgba(59, 111, 255, 0.15), transparent 70%);
+  transform: translate(40%, -40%);
+}
+
+.service-icon {
+  width: 56px; height: 56px;
+  border-radius: 14px;
+  background: var(--grad-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0a0f1e;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.service-icon svg { width: 26px; height: 26px; stroke-width: 2.2; }
+
+.service-card h3 { margin-bottom: 12px; font-size: 1.3rem; position: relative; font-weight: 700; }
+.service-card p { font-size: 0.93rem; position: relative; }
+
+.service-list {
+  list-style: none;
+  margin-top: 18px;
+  position: relative;
+}
+
+.service-list li {
+  padding: 6px 0;
+  padding-left: 20px;
+  position: relative;
+  font-size: 0.88rem;
+  color: var(--c-text-muted);
+}
+
+.service-list li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 14px;
+  width: 8px; height: 2px;
+  background: var(--c-blue-bright);
+}
+
+.about-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: start;
+}
+
+@media (max-width: 800px) { .about-wrap { grid-template-columns: 1fr; gap: 40px; } }
+
+.about-wrap h2 { margin: 20px 0 24px; }
+.about-wrap p { margin-bottom: 18px; font-size: 1rem; }
+
+.about-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.stat-box {
+  padding: 26px;
+  background: var(--c-bg-soft);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-m);
+}
+
+.stat-box strong {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  background: var(--grad-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.stat-box span { font-size: 0.82rem; color: var(--c-text-muted); }
+
+.values-list { display: grid; gap: 14px; }
+
+.value-item {
+  display: flex;
+  gap: 16px;
+  padding: 22px;
+  background: var(--c-bg-soft);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-m);
+}
+
+.value-item .v-num {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--c-blue-bright);
+  flex-shrink: 0;
+}
+
+.value-item h4 { font-size: 0.98rem; margin-bottom: 4px; font-weight: 600; }
+.value-item p { font-size: 0.88rem; margin: 0; }
+
+.about-image {
+  width: 100%;
+  border-radius: var(--radius-l);
+  border: 1px solid var(--c-border);
+  margin-bottom: 30px;
+  aspect-ratio: 16 / 11;
+  object-fit: cover;
+}
+
+.trust-strip {
+  background: var(--c-bg-alt);
+  border-top: 1px solid var(--c-border);
+  border-bottom: 1px solid var(--c-border);
+  padding: 50px 0;
+}
+
+.trust-strip-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .trust-strip-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+}
+
+.trust-item svg {
+  width: 32px;
+  height: 32px;
+  color: var(--c-blue-bright);
+  margin: 0 auto 12px;
+  display: block;
+  stroke-width: 2;
+}
+
+.trust-item strong {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--c-text);
+  margin-bottom: 4px;
+}
+
+.trust-item span { font-size: 0.78rem; color: var(--c-text-muted); }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>JetztON</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Start</a></li>
+      <li><a href="leistungen.html">Leistungen</a></li>
+      <li><a href="preise.html">Preise</a></li>
+      <li><a href="ueber.html">Über uns</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="kontakt.html" class="btn btn-primary">Gratis-Prototyp</a>
+      <button class="nav-toggle" aria-label="Menü"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">Web-Agentur Thun</span>
+        <h1>Moderne Websites, fertig in <em>1 bis 2 Wochen</em>.</h1>
+        <p class="hero-sub">Wir bauen Ihnen zuerst kostenlos einen Prototypen Ihrer neuen Website. Sie sehen das Ergebnis, bevor Sie sich entscheiden. Kein Risiko, keine Vorkasse.</p>
+        <div class="hero-actions">
+          <a href="kontakt.html" class="btn btn-primary">Kostenlosen Prototyp anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          <a href="leistungen.html" class="btn btn-ghost">So funktioniert's</a>
+        </div>
+        <div class="hero-meta">
+          <div class="hero-meta-item">
+            <strong>1 bis 2 Wo.</strong>
+            <span>Umsetzungszeit</span>
+          </div>
+          <div class="hero-meta-item">
+            <strong>0 CHF</strong>
+            <span>Prototyp vorab</span>
+          </div>
+          <div class="hero-meta-item">
+            <strong>100%</strong>
+            <span>DSG-konform</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-image-wrap">
+          <img class="hero-image" src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=900&q=80&auto=format&fit=crop" alt="Modernes Webdesign-Studio in Thun" loading="eager">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="trust-strip">
+  <div class="container">
+    <div class="trust-strip-grid">
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <strong>Lokal in Thun</strong>
+        <span>Persönlich vor Ort</span>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        <strong>Schnell geliefert</strong>
+        <span>In 1 bis 2 Wochen</span>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <strong>DSG-konform</strong>
+        <span>Schweizer Recht</span>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        <strong>Risikofrei</strong>
+        <span>Prototyp vor Kauf</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="problem" data-reveal>
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Das Problem</span>
+      <h2>Viele Unternehmen verlieren täglich Kunden, ohne es zu merken.</h2>
+      <p>Die Website ist oft der erste Eindruck. Wenn sie langsam, veraltet oder unübersichtlich ist, klickt der potenzielle Kunde weg und landet beim Mitbewerber.</p>
+    </div>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="problem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <h3>Langsame Ladezeiten</h3>
+        <p>Jede Sekunde Ladezeit kostet Kunden. Über 50 Prozent brechen ab, wenn die Seite nicht innerhalb von 3 Sekunden lädt.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
+        <h3>Nicht mobil optimiert</h3>
+        <p>Über 70 Prozent der Besucher kommen vom Handy. Eine Seite, die am Smartphone nicht funktioniert, verliert den Grossteil aller Anfragen.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/><polyline points="17 18 23 18 23 12"/></svg></div>
+        <h3>Veraltetes Design</h3>
+        <p>Ein altes Design signalisiert unbewusst, dass die Firma nicht auf dem neuesten Stand ist. Vertrauen geht verloren, bevor ein Wort gelesen wurde.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg></div>
+        <h3>Unklare Struktur</h3>
+        <p>Wenn Besucher nicht sofort finden, was sie suchen, gehen sie weg. Ohne klare Call-to-Actions bleiben Anfragen aus.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-reveal>
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Unser Ablauf</span>
+      <h2>In fünf Schritten zu Ihrer neuen Website.</h2>
+      <p>Transparent, schnell und ohne Vorkasse. Sie sehen das Ergebnis, bevor Sie sich entscheiden.</p>
+    </div>
+    <div class="process-timeline">
+      <div class="process-step">
+        <div class="process-num">1</div>
+        <div class="process-content">
+          <h3>Analyse</h3>
+          <p>Wir schauen uns Ihre aktuelle Website an, oder, falls keine existiert, Ihre Social-Media-Präsenz oder Firmenbilder. Wir erkennen Schwachstellen und Chancen.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-num">2</div>
+        <div class="process-content">
+          <h3>Kostenloser Prototyp</h3>
+          <p>Innerhalb weniger Tage erhalten Sie einen echten, funktionierenden Prototypen Ihrer neuen Website. Kein Mockup, keine leeren Versprechen.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-num">3</div>
+        <div class="process-content">
+          <h3>Ihre Entscheidung</h3>
+          <p>Sie vergleichen alt und neu und entscheiden frei, ob Sie umsetzen lassen wollen. Ohne jede Verpflichtung.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-num">4</div>
+        <div class="process-content">
+          <h3>Umsetzung</h3>
+          <p>Fällt die Entscheidung für uns, realisieren wir die finale Website innerhalb von 1 bis 2 Wochen, inklusive Inhalte, Feintuning und Tests.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-num">5</div>
+        <div class="process-content">
+          <h3>Go Live</h3>
+          <p>Wir gehen mit Ihrer Website live, übergeben alle Zugänge oder betreuen Sie weiter, je nach gewähltem Paket.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="compare" data-reveal>
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Der Unterschied</span>
+      <h2>Klassische Agentur oder JetztON.</h2>
+      <p>Warum mit einer Webagentur arbeiten, die Wochen braucht, Vorkasse verlangt und mit Rechnung überrascht?</p>
+    </div>
+    <div class="compare-table">
+      <div class="compare-row compare-head">
+        <div class="label">Merkmal</div>
+        <div class="old">Klassische Agentur</div>
+        <div class="new">JetztON</div>
+      </div>
+      <div class="compare-row">
+        <div class="label">Projektstart</div>
+        <div class="old">1 bis 3 Wochen Wartezeit</div>
+        <div class="new">24 bis 48 Stunden</div>
+      </div>
+      <div class="compare-row">
+        <div class="label">Fertigstellung</div>
+        <div class="old">4 bis 12 Wochen</div>
+        <div class="new">1 bis 2 Wochen</div>
+      </div>
+      <div class="compare-row">
+        <div class="label">Preis</div>
+        <div class="old">4'000 bis 15'000 CHF</div>
+        <div class="new">ab 300 CHF einmalig</div>
+      </div>
+      <div class="compare-row">
+        <div class="label">Prototyp vorab</div>
+        <div class="old">Keiner, Sie bezahlen blind</div>
+        <div class="new">Gratis, vor Ihrer Entscheidung</div>
+      </div>
+      <div class="compare-row">
+        <div class="label">Flexibilität</div>
+        <div class="old">Starre Prozesse</div>
+        <div class="new">Direkter Kontakt, schnelle Änderungen</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-reveal>
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Vorteile</span>
+      <h2>Warum Unternehmen sich für JetztON entscheiden.</h2>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit">
+        <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <h3>Kostenloser Prototyp</h3>
+        <p>Sie sehen zuerst, was Sie bekommen. Danach entscheiden Sie.</p>
+      </div>
+      <div class="benefit">
+        <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+        <h3>1 bis 2 Wochen Umsetzung</h3>
+        <p>Während andere noch planen, sind Sie schon online.</p>
+      </div>
+      <div class="benefit">
+        <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.8L20 10.5l-5.5 2.6L12 19l-2.5-5.9L4 10.5l5.6-1.7L12 3z"/></svg></div>
+        <h3>Modernes Design</h3>
+        <p>Individuell, nicht von der Stange. Mobile-first und auf Conversion gebaut.</p>
+      </div>
+      <div class="benefit">
+        <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3>Persönliche Betreuung</h3>
+        <p>Kein Ticketsystem, kein Call-Center. Direkter Kontakt zu echten Menschen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-reveal>
+  <div class="container">
+    <div class="cta-banner">
+      <h2>Lassen Sie uns Ihre Website neu denken.</h2>
+      <p>Kostenlos, unverbindlich, in wenigen Tagen. Sie sehen zuerst das Ergebnis, dann entscheiden Sie.</p>
+      <a href="kontakt.html" class="btn">Kostenlosen Prototyp starten <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand"><span class="logo-dot"></span>JetztON</div>
+        <p class="footer-about">Web-Agentur in Thun. Moderne Websites für Schweizer KMU. Kostenloser Prototyp vor Kauf, Umsetzung in 1 bis 2 Wochen.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <a href="index.html">Start</a>
+        <a href="leistungen.html">Leistungen</a>
+        <a href="preise.html">Preise</a>
+        <a href="ueber.html">Über uns</a>
+      </div>
+      <div class="footer-col">
+        <h4>Angebot</h4>
+        <a href="leistungen.html">Website erstellen</a>
+        <a href="leistungen.html">Redesign</a>
+        <a href="leistungen.html">Landingpage</a>
+        <a href="preise.html">Wartung &amp; Support</a>
+      </div>
+      <div class="footer-col">
+        <h4>Rechtliches</h4>
+        <a href="impressum.html">Impressum</a>
+        <a onclick="openLegal('datenschutz')">Datenschutz</a>
+        <a onclick="openLegal('agb')">AGB</a>
+        <a href="kontakt.html">Kontakt</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 JetztON, Thun (Schweiz). Alle Rechte vorbehalten.</span>
+      <span>Made in Switzerland</span>
+    </div>
+  </div>
+</footer>
+
+<div class="cookie-banner" id="cookieBanner">
+  <h4>Cookies auf jetzton.ch</h4>
+  <p>Wir verwenden notwendige Cookies, damit die Website funktioniert. Mit Ihrer Zustimmung nutzen wir zusätzlich Cookies für anonymisierte Statistiken.</p>
+  <div class="cookie-actions">
+    <button class="btn btn-primary" onclick="acceptCookies(true)">Alle akzeptieren</button>
+    <button class="btn btn-ghost" onclick="acceptCookies(false)">Nur notwendige</button>
+  </div>
+</div>
+
+<div class="legal-overlay" id="datenschutzOverlay">
+  <div class="legal-modal">
+    <button class="legal-close" onclick="closeLegal('datenschutz')">&times;</button>
+    <h2>Datenschutzerklärung</h2>
+    <h3>Allgemeiner Hinweis</h3>
+    <p>Gestützt auf das revidierte Schweizer Datenschutzgesetz (DSG) ist jede Person berechtigt, Auskunft über die Verarbeitung ihrer Personendaten zu verlangen. Wir behandeln Ihre Personendaten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften.</p>
+    <h3>Verantwortliche Stelle</h3>
+    <p>JetztON, 3600 Thun, Schweiz<br>E-Mail: jetzton@outlook.com</p>
+    <h3>Erhebung und Verarbeitung</h3>
+    <p>Beim Besuch unserer Website werden automatisch allgemeine Informationen erfasst (Server-Logfiles): verwendeter Browser, Betriebssystem, Domainname des Internet-Anbieters, anonymisierte IP-Adresse. Diese Daten lassen keine Rückschlüsse auf Ihre Person zu.</p>
+    <h3>Kontaktformular</h3>
+    <p>Wenn Sie uns über das Kontaktformular oder per E-Mail kontaktieren, speichern wir Ihre Angaben zur Bearbeitung der Anfrage. Eine Weitergabe an Dritte erfolgt nicht ohne Ihre Einwilligung.</p>
+    <h3>Cookies</h3>
+    <p>Unsere Website verwendet notwendige Cookies für den Betrieb. Weitere Cookies werden nur mit Ihrer ausdrücklichen Zustimmung über den Cookie-Banner gesetzt.</p>
+    <h3>Ihre Rechte</h3>
+    <p>Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten Personendaten sowie ein Recht auf Berichtigung oder Löschung dieser Daten.</p>
+  </div>
+</div>
+
+<div class="legal-overlay" id="agbOverlay">
+  <div class="legal-modal">
+    <button class="legal-close" onclick="closeLegal('agb')">&times;</button>
+    <h2>Allgemeine Geschäftsbedingungen</h2>
+    <h3>1. Geltungsbereich</h3>
+    <p>Diese AGB gelten für alle Verträge zwischen JetztON und ihren Kundinnen und Kunden über die Erstellung von Websites, Landingpages und verwandten Dienstleistungen.</p>
+    <h3>2. Kostenloser Prototyp</h3>
+    <p>Der Prototyp ist unverbindlich und kostenlos. Er dient der Vorstellung der möglichen Umsetzung. Es besteht kein Anspruch auf eine bestimmte Gestaltung oder Funktionalität des Prototyps.</p>
+    <h3>3. Preise</h3>
+    <p>Alle Preise verstehen sich in Schweizer Franken (CHF). Sofern nicht anders angegeben, verstehen sich Preise ohne Mehrwertsteuer. Rechnungen sind innerhalb von 14 Tagen zahlbar.</p>
+    <h3>4. Leistungsumfang</h3>
+    <p>Der genaue Leistungsumfang wird individuell im Angebot vereinbart. Zusätzliche Wünsche können gegen Aufpreis jederzeit beauftragt werden.</p>
+    <h3>5. Gewährleistung</h3>
+    <p>JetztON gewährleistet die funktionsgemässe Erbringung der vereinbarten Leistungen. Für vom Kunden bereitgestellte Inhalte übernimmt JetztON keine Haftung.</p>
+    <h3>6. Gerichtsstand</h3>
+    <p>Es gilt Schweizer Recht. Gerichtsstand ist Thun.</p>
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.querySelector(".nav-toggle");
+  const links = document.querySelector(".nav-links");
+  if (toggle && links) {
+    toggle.addEventListener("click", () => links.classList.toggle("open"));
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) {
+        e.target.classList.add("visible");
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll("[data-reveal]").forEach((el) => observer.observe(el));
+
+  const banner = document.getElementById("cookieBanner");
+  if (banner && !localStorage.getItem("jetzton_cookies")) {
+    setTimeout(() => banner.classList.add("show"), 800);
+  }
+  window.acceptCookies = (all) => {
+    localStorage.setItem("jetzton_cookies", all ? "all" : "necessary");
+    banner && banner.classList.remove("show");
+  };
+
+  window.openLegal = (id) => {
+    const el = document.getElementById(id + "Overlay");
+    if (el) { el.classList.add("open"); document.body.style.overflow = "hidden"; }
+  };
+  window.closeLegal = (id) => {
+    const el = document.getElementById(id + "Overlay");
+    if (el) { el.classList.remove("open"); document.body.style.overflow = ""; }
+  };
+  document.querySelectorAll(".legal-overlay").forEach((ov) => {
+    ov.addEventListener("click", (e) => {
+      if (e.target === ov) { ov.classList.remove("open"); document.body.style.overflow = ""; }
+    });
+  });
+
+  // Obfuskierte Adresse / Name fuer Impressum (kein Klartext im HTML)
+  const slot = document.getElementById("imprint-owner");
+  if (slot) {
+    const p1 = ["TG91aXM=", "QnJlY2hidWVobA=="];
+    const p2 = ["U2NoZWZmZWx3ZWcgMTM=", "MzYwMCBUaHVu"];
+    try {
+      const name = atob(p1[0]) + " " + atob(p1[1]);
+      const adr = atob(p2[0]) + ", " + atob(p2[1]);
+      slot.innerHTML = name + "<br>" + adr;
+    } catch (e) {}
+  }
+
+  // Partikel-Animation auf .btn-primary (Hover)
+  (function() {
+    const canvas = document.createElement("canvas");
+    canvas.style.cssText = "position:fixed;pointer-events:none;z-index:90;left:0;top:0;display:none";
+    document.body.appendChild(canvas);
+    const ctx = canvas.getContext("2d");
+
+    const PADDING = 110;
+    const COUNT = 42;
+    let particles = [];
+    let activeBtn = null;
+    let mouseX = 0, mouseY = 0;
+    let rafId = null;
+
+    function init(btn) {
+      const rect = btn.getBoundingClientRect();
+      canvas.width = rect.width + PADDING * 2;
+      canvas.height = rect.height + PADDING * 2;
+      canvas.style.left = (rect.left - PADDING) + "px";
+      canvas.style.top = (rect.top - PADDING) + "px";
+      canvas.style.display = "block";
+
+      particles = [];
+      for (let i = 0; i < COUNT; i++) {
+        const angle = Math.random() * Math.PI * 2;
+        const dist = Math.random() * 80 + 30;
+        particles.push({
+          x: canvas.width / 2 + Math.cos(angle) * dist,
+          y: canvas.height / 2 + Math.sin(angle) * dist,
+          vx: 0,
+          vy: 0,
+          r: Math.random() * 1.4 + 0.6,
+          opacity: Math.random() * 0.55 + 0.35,
+          orbitAngle: angle,
+          orbitSpeed: (Math.random() * 0.4 + 0.2) * 0.004
+        });
+      }
+    }
+
+    function draw() {
+      if (!activeBtn) return;
+      const rect = activeBtn.getBoundingClientRect();
+      canvas.style.left = (rect.left - PADDING) + "px";
+      canvas.style.top = (rect.top - PADDING) + "px";
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      const targetX = mouseX - (rect.left - PADDING);
+      const targetY = mouseY - (rect.top - PADDING);
+
+      particles.forEach(p => {
+        const dx = targetX - p.x;
+        const dy = targetY - p.y;
+        const dist = Math.sqrt(dx * dx + dy * dy) || 1;
+
+        p.orbitAngle += p.orbitSpeed;
+        const orbitX = Math.cos(p.orbitAngle) * 0.15;
+        const orbitY = Math.sin(p.orbitAngle) * 0.15;
+
+        p.vx += (dx / dist) * 0.035 + orbitX;
+        p.vy += (dy / dist) * 0.035 + orbitY;
+        p.vx *= 0.93;
+        p.vy *= 0.93;
+
+        p.x += p.vx;
+        p.y += p.vy;
+
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = "rgba(110, 231, 255, " + p.opacity + ")";
+        ctx.shadowBlur = 8;
+        ctx.shadowColor = "rgba(110, 231, 255, 0.9)";
+        ctx.fill();
+      });
+
+      rafId = requestAnimationFrame(draw);
+    }
+
+    document.addEventListener("mouseover", (e) => {
+      const btn = e.target.closest(".btn-primary");
+      if (btn && btn !== activeBtn) {
+        activeBtn = btn;
+        init(btn);
+        cancelAnimationFrame(rafId);
+        draw();
+      }
+    });
+
+    document.addEventListener("mouseout", (e) => {
+      const btn = e.target.closest(".btn-primary");
+      if (btn && !btn.contains(e.relatedTarget)) {
+        activeBtn = null;
+        cancelAnimationFrame(rafId);
+        setTimeout(() => {
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          canvas.style.display = "none";
+        }, 150);
+      }
+    });
+
+    document.addEventListener("mousemove", (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    });
+  })();
+});
+</script>
+</body>
+</html>
