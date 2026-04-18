@@ -1,4 +1,4 @@
-/* Poppins (Latin-Subset) — self-hosted fuer DSG/DSGVO-Konformitaet */
+/* Poppins (Latin-Subset) â€” self-hosted fuer DSG/DSGVO-Konformitaet */
 @font-face {
   font-family: 'Poppins';
   font-style: normal;
@@ -66,7 +66,7 @@
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: hidden; }
 
 body {
   font-family: var(--f-body);
@@ -787,7 +787,7 @@ section { padding: 100px 0; position: relative; z-index: 1; }
 }
 
 .contact-detail:last-child { border-bottom: 1px solid var(--c-border); }
-.contact-detail svg { color: var(--c-blue-bright); flex-shrink: 0; }
+.contact-detail svg { width: 20px; height: 20px; color: var(--c-blue-bright); flex-shrink: 0; }
 
 .form-card {
   background: var(--c-bg-soft);
@@ -795,6 +795,8 @@ section { padding: 100px 0; position: relative; z-index: 1; }
   border-radius: var(--radius-l);
   padding: 40px;
 }
+
+@media (max-width: 600px) { .form-card { padding: 24px; } }
 
 .form-row {
   display: grid;
