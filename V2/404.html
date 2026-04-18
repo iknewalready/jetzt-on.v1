@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seite nicht gefunden | JetztON</title>
+<meta name="description" content="Diese Seite existiert nicht oder wurde verschoben. Zurück zur Startseite von JetztON.">
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#0a0f1e">
+<link rel="stylesheet" href="/assets/css/styles.css">
+<style>
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: linear-gradient(135deg, #0a0f1e 0%, #1a2238 100%);
+    color: #f5f7fb;
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px;
+  }
+  .wrap { max-width: 560px; }
+  .dot {
+    width: 64px; height: 64px; border-radius: 50%;
+    background: linear-gradient(135deg, #3b6fff 0%, #6ee7ff 100%);
+    margin: 0 auto 24px; box-shadow: 0 20px 60px -20px rgba(59, 111, 255, 0.45);
+  }
+  h1 { font-size: clamp(2rem, 6vw, 3.5rem); margin: 0 0 12px; letter-spacing: -1px; }
+  p  { color: #9aa3bd; font-size: 1.1rem; line-height: 1.6; margin: 0 0 32px; }
+  .btn {
+    display: inline-block; padding: 14px 28px; border-radius: 10px;
+    background: linear-gradient(135deg, #3b6fff 0%, #6ee7ff 100%);
+    color: #0a0f1e; font-weight: 600; text-decoration: none;
+    transition: transform .15s ease;
+  }
+  .btn:hover { transform: translateY(-2px); }
+  .links { margin-top: 24px; font-size: .95rem; }
+  .links a { color: #6ee7ff; margin: 0 10px; text-decoration: none; }
+  .links a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="dot"></div>
+    <h1>Seite nicht gefunden</h1>
+    <p>Die angefragte Seite existiert nicht oder wurde verschoben. Kein Problem – hier geht's zurück.</p>
+    <a class="btn" href="/">Zur Startseite</a>
+    <nav class="links">
+      <a href="/leistungen/">Leistungen</a>
+      <a href="/preise/">Preise</a>
+      <a href="/kontakt/">Kontakt</a>
+    </nav>
+  </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+# JetztON
+
+> JetztON ist eine Web-Agentur in Thun (Schweiz), die moderne Websites für Schweizer KMU erstellt. Kostenloser Prototyp vor Kauf, Umsetzung in 1 bis 2 Wochen, DSG-konform, Preise ab 300 CHF.
+
+## Über
+
+JetztON ist eine moderne Web-Agentur aus Thun (3600, Kanton Bern). Fokus: Schweizer Kleinunternehmen und KMU. Schneller, transparenter und fairer als klassische Agenturen. Kontakt per E-Mail an jetzton@outlook.com, Antwort innerhalb von 24 Stunden.
+
+## Leistungen
+
+- Website-Erstellung für KMU
+- Redesign bestehender Websites
+- Landingpages
+- Wartung und Support
+
+Umsetzung üblicherweise in 1 bis 2 Wochen. Alle Projekte beginnen mit einem kostenlosen, klickbaren Prototyp, den der Kunde vor dem Kauf prüfen kann.
+
+## Preise
+
+- **Mit Wartung:** 300 CHF einmalig + 30 CHF pro Monat (Hosting, Updates, Support inklusive)
+- **Zur Eigenverwaltung:** 550 CHF einmalig (Website geht in Besitz des Kunden über)
+- Kostenloser Prototyp ist in beiden Varianten inklusive
+
+Währung: CHF. DSG-konform (Schweizer Datenschutzgesetz).
+
+## Einzugsgebiet
+
+Hauptsächlich Berner Oberland und Kanton Bern: Thun, Bern, Spiez, Interlaken, Steffisburg. Aufträge aus der ganzen Schweiz werden angenommen.
+
+## Seiten
+
+- [Startseite](https://jetzton.ch/): Übersicht und Einstieg
+- [Leistungen](https://jetzton.ch/leistungen/): Website-Erstellung, Redesign, Landingpage, Wartung
+- [Preise](https://jetzton.ch/preise/): Zwei Preismodelle, transparent
+- [Über uns](https://jetzton.ch/ueber/): Wer hinter JetztON steht
+- [Kontakt](https://jetzton.ch/kontakt/): Prototyp anfragen, jetzton@outlook.com
