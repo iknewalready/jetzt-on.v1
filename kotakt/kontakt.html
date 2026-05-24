@@ -2,7 +2,7 @@
 <html lang="de-CH">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 <title>Kontakt | JetztON Webdesign Thun</title>
 <meta name="description" content="Kostenlosen Prototyp anfragen. Antwort innerhalb von 24 Stunden. JetztON, Web-Agentur in Thun.">
 <meta name="robots" content="index, follow">
@@ -40,7 +40,7 @@
   "name": "JetztON",
   "description": "Web-Agentur in Thun. Moderne Websites für Schweizer KMU mit kostenlosem Prototyp vor Kauf.",
   "url": "https://jetzton.ch",
-  "email": "info@jetzton.ch",
+  "email": "jetzton@outlook.com",
   "areaServed": [
     {"@type": "City", "name": "Thun"},
     {"@type": "AdministrativeArea", "name": "Berner Oberland"},
@@ -98,7 +98,7 @@
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: clip; }
 
 body {
   font-family: var(--f-body);
@@ -106,10 +106,13 @@ body {
   color: var(--c-text);
   line-height: 1.65;
   font-size: 16px;
-  overflow-x: hidden;
+  overflow-x: clip;
+  max-width: 100vw;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
 }
+
+h1, h2, h3, h4, p { overflow-wrap: break-word; word-wrap: break-word; }
 
 body::before {
   content: "";
@@ -556,9 +559,15 @@ section { padding: 100px 0; position: relative; z-index: 1; }
   z-index: 2;
 }
 
-.process-content { flex: 1; padding-top: 12px; }
+.process-content { flex: 1; padding-top: 12px; min-width: 0; }
 .process-content h3 { margin-bottom: 8px; font-weight: 600; }
 .process-content p { font-size: 0.95rem; }
+
+@media (max-width: 480px) {
+  .process-step { gap: 18px; margin-bottom: 32px; }
+  .process-num { width: 46px; height: 46px; font-size: 1rem; }
+  .process-timeline::before { left: 22px; }
+}
 
 .compare {
   background: linear-gradient(180deg, rgba(59, 111, 255, 0.04), transparent);
@@ -804,7 +813,18 @@ section { padding: 100px 0; position: relative; z-index: 1; }
   align-items: start;
 }
 
-@media (max-width: 900px) { .contact-wrap { grid-template-columns: 1fr; gap: 40px; } }
+@media (max-width: 900px) {
+  .contact-wrap { grid-template-columns: 1fr; gap: 40px; justify-items: center; }
+  .contact-wrap > * { width: 100%; max-width: 560px; margin: 0 auto; }
+}
+@media (max-width: 600px) {
+  .contact-wrap { gap: 32px; }
+  .form-card { padding: 24px 20px; border-radius: 16px; }
+  .contact-info { text-align: center; }
+  .contact-info h2 { font-size: 1.6rem; margin: 12px 0 16px; }
+  .contact-info > p { font-size: 0.95rem; margin-bottom: 24px; }
+  .contact-detail { font-size: 0.9rem; gap: 12px; padding: 12px 0; text-align: left; }
+}
 
 .contact-info h2 { margin: 20px 0 20px; }
 .contact-info > p { margin-bottom: 32px; font-size: 1rem; }
@@ -819,7 +839,16 @@ section { padding: 100px 0; position: relative; z-index: 1; }
 }
 
 .contact-detail:last-child { border-bottom: 1px solid var(--c-border); }
-.contact-detail svg { color: var(--c-blue-bright); flex-shrink: 0; }
+.contact-detail svg {
+  color: var(--c-blue-bright);
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  stroke-width: 2;
+}
+.contact-detail a { color: var(--c-text); text-decoration: none; word-break: break-word; }
+.contact-detail a:hover { color: var(--c-blue-bright); }
+.contact-detail span { word-break: break-word; min-width: 0; }
 
 .form-card {
   background: var(--c-bg-soft);
@@ -1064,6 +1093,12 @@ section { padding: 100px 0; position: relative; z-index: 1; }
 
 [data-reveal].visible { opacity: 1; transform: translateY(0); }
 
+/* Fallback: wenn JS nicht laeuft, Inhalte trotzdem sichtbar */
+.no-js [data-reveal], html.no-reveal [data-reveal] { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] { opacity: 1 !important; transform: none !important; }
+}
+
 .page-head {
   padding: 80px 0 60px;
   text-align: center;
@@ -1280,13 +1315,13 @@ section { padding: 100px 0; position: relative; z-index: 1; }
 <section style="padding-top:30px">
   <div class="container">
     <div class="contact-wrap">
-      <div class="contact-info" data-reveal>
+      <div class="contact-info">
         <span class="eyebrow">Direkt und persönlich</span>
         <h2>So geht es weiter.</h2>
         <p>Nach Ihrer Nachricht prüfen wir Ihr Unternehmen, analysieren Ihre aktuelle Online-Präsenz und erstellen einen kostenlosen Prototypen, meist innerhalb weniger Tage.</p>
         <div class="contact-detail">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          <span>info@jetzton.ch</span>
+          <span><a href="mailto:jetzton@outlook.com">jetzton@outlook.com</a></span>
         </div>
         <div class="contact-detail">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -1298,7 +1333,7 @@ section { padding: 100px 0; position: relative; z-index: 1; }
         </div>
       </div>
 
-      <form class="form-card" data-reveal action="https://api.web3forms.com/submit" method="POST">
+      <form class="form-card" action="https://api.web3forms.com/submit" method="POST">
         <input type="hidden" name="access_key" value="03aaf936-af99-4014-89fc-cafbf379e9e7">
         <input type="hidden" name="subject" value="Neue Anfrage über jetzton.ch">
         <input type="hidden" name="redirect" value="https://jetzton.ch/kontakt.html?ok=1">
@@ -1420,7 +1455,7 @@ section { padding: 100px 0; position: relative; z-index: 1; }
     <h3>Allgemeiner Hinweis</h3>
     <p>Gestützt auf das revidierte Schweizer Datenschutzgesetz (DSG) ist jede Person berechtigt, Auskunft über die Verarbeitung ihrer Personendaten zu verlangen. Wir behandeln Ihre Personendaten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften.</p>
     <h3>Verantwortliche Stelle</h3>
-    <p>JetztON, 3600 Thun, Schweiz<br>E-Mail: info@jetzton.ch</p>
+    <p>JetztON, 3600 Thun, Schweiz<br>E-Mail: <a href="mailto:jetzton@outlook.com">jetzton@outlook.com</a></p>
     <h3>Erhebung und Verarbeitung</h3>
     <p>Beim Besuch unserer Website werden automatisch allgemeine Informationen erfasst (Server-Logfiles): verwendeter Browser, Betriebssystem, Domainname des Internet-Anbieters, anonymisierte IP-Adresse. Diese Daten lassen keine Rückschlüsse auf Ihre Person zu.</p>
     <h3>Kontaktformular</h3>
@@ -1595,21 +1630,4 @@ document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener("mouseout", (e) => {
       const btn = e.target.closest(".btn-primary");
       if (btn && !btn.contains(e.relatedTarget)) {
-        activeBtn = null;
-        cancelAnimationFrame(rafId);
-        setTimeout(() => {
-          ctx.clearRect(0, 0, canvas.width, canvas.height);
-          canvas.style.display = "none";
-        }, 150);
-      }
-    });
-
-    document.addEventListener("mousemove", (e) => {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-    });
-  })();
-});
-</script>
-</body>
-</html>
+        activeBtn = nul
