@@ -123,11 +123,12 @@
 </nav>
 
 <section class="hero">
+  <div id="particles-js" aria-hidden="true"></div>
   <div class="container">
     <div class="hero-grid">
       <div>
         <span class="eyebrow">Web-Agentur Thun</span>
-        <h1>Moderne Websites, fertig in <em>1 bis 2 Wochen</em>.</h1>
+        <h1>In nur <em>2 Wochen</em> zu einer Website, die Kunden gewinnt.</h1>
         <p class="hero-sub">Wir bauen Ihnen zuerst kostenlos einen Prototypen Ihrer neuen Website. Sie sehen das Ergebnis, bevor Sie sich entscheiden. Kein Risiko, keine Vorkasse.</p>
         <div class="hero-actions">
           <a href="/kontakt/" class="btn btn-primary">Kostenlosen Prototyp anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
@@ -586,6 +587,46 @@ document.addEventListener("DOMContentLoaded", () => {
       mouseX = e.clientX;
       mouseY = e.clientY;
     });
+  })();
+
+  // Partikel-Hintergrund im Hero (particles.js)
+  (function() {
+    const target = document.getElementById("particles-js");
+    if (!target) return;
+    if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    const script = document.createElement("script");
+    script.src = "https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js";
+    script.async = true;
+    script.onload = () => {
+      if (typeof window.particlesJS !== "function") return;
+      window.particlesJS("particles-js", {
+        particles: {
+          number: { value: 140, density: { enable: true, value_area: 800 } },
+          color: { value: "#6ee7ff" },
+          shape: { type: "circle", stroke: { width: 0.5, color: "#1d3fb8" } },
+          opacity: { value: 0.7, random: true, anim: { enable: true, speed: 1, opacity_min: 0.3 } },
+          size: { value: 3, random: true, anim: { enable: true, speed: 2, size_min: 1 } },
+          line_linked: { enable: true, distance: 160, color: "#3b6fff", opacity: 0.4, width: 1.2 },
+          move: { enable: true, speed: 2, random: true, out_mode: "bounce" }
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: { enable: true, mode: "grab" },
+            onclick: { enable: true, mode: "push" },
+            resize: true
+          },
+          modes: {
+            grab: { distance: 220, line_linked: { opacity: 0.8 } },
+            push: { particles_nb: 4 },
+            repulse: { distance: 180, duration: 0.4 }
+          }
+        },
+        retina_detect: true
+      });
+    };
+    document.body.appendChild(script);
   })();
 });
 </script>
