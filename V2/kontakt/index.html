@@ -164,10 +164,10 @@
         </div>
       </div>
 
-      <form class="form-card" data-reveal action="https://api.web3forms.com/submit" method="POST">
+      <form id="contactForm" class="form-card" data-reveal action="https://api.web3forms.com/submit" method="POST">
         <input type="hidden" name="access_key" value="03aaf936-af99-4014-89fc-cafbf379e9e7">
         <input type="hidden" name="subject" value="Neue Anfrage über jetzton.ch">
-        <input type="hidden" name="redirect" value="https://jetzton.ch/kontakt.html?ok=1">
+        <input type="hidden" name="from_name" value="JetztON Website">
         <input type="checkbox" name="botcheck" style="display:none">
 
         <div class="form-row">
@@ -229,7 +229,14 @@
         </div>
 
         <button type="submit" class="btn btn-primary">Kostenlosen Prototyp anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+        <p id="formError" class="form-error" style="display:none"></p>
       </form>
+
+      <div id="formSuccess" class="form-card form-success" style="display:none">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="8 12 11 15 16 9"/></svg>
+        <h3>Vielen Dank für Ihre Anfrage!</h3>
+        <p>Wir haben Ihre Nachricht erhalten und melden uns innerhalb von 24 Stunden bei Ihnen. Eine Bestätigung wurde an Ihre E-Mail-Adresse gesendet.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -357,6 +364,40 @@ document.addEventListener("DOMContentLoaded", () => {
       if (e.target === ov) { ov.classList.remove("open"); document.body.style.overflow = ""; }
     });
   });
+
+  const form = document.getElementById("contactForm");
+  if (form) {
+    const errorEl = document.getElementById("formError");
+    const successEl = document.getElementById("formSuccess");
+    const submitBtn = form.querySelector("button[type=submit]");
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      errorEl.style.display = "none";
+      submitBtn.disabled = true;
+      const original = submitBtn.innerHTML;
+      submitBtn.textContent = "Wird gesendet…";
+      try {
+        const res = await fetch(form.action, {
+          method: "POST",
+          headers: { Accept: "application/json" },
+          body: new FormData(form),
+        });
+        const data = await res.json();
+        if (res.ok && data.success) {
+          form.style.display = "none";
+          successEl.style.display = "block";
+          successEl.scrollIntoView({ behavior: "smooth", block: "center" });
+        } else {
+          throw new Error(data.message || "Senden fehlgeschlagen");
+        }
+      } catch (err) {
+        errorEl.textContent = "Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder schreiben Sie an info@jetzton.ch.";
+        errorEl.style.display = "block";
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = original;
+      }
+    });
+  }
 
   // Obfuskierte Adresse / Name fuer Impressum (kein Klartext im HTML)
   const slot = document.getElementById("imprint-owner");
