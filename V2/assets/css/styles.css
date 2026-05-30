@@ -798,6 +798,22 @@ section { padding: 100px 0; position: relative; z-index: 1; }
 
 @media (max-width: 600px) { .form-card { padding: 24px; } }
 
+.form-success { text-align: center; }
+.form-success svg {
+  width: 56px;
+  height: 56px;
+  color: #22c55e;
+  margin-bottom: 16px;
+}
+.form-success h3 { color: var(--c-text); margin: 0 0 10px; }
+.form-success p { color: var(--c-text-muted); margin: 0; }
+
+.form-error {
+  color: #f87171;
+  font-size: 0.9rem;
+  margin: 14px 0 0;
+}
+
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
